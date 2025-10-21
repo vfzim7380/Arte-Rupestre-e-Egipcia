@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.divisor {
+    position: absolute;
+    width: 3px;
+    background-color: rgba(0, 0, 0, 0.425);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.rupestre, .egipcia {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.rupestre img, .egipcia img {
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    transition: transform 1s ease, filter 0.6s ease;
+    filter: brightness(0.8);
+}
+
+h1 {
+    position: absolute;
+    top: 10%;
+    color: white;
+    font-size: 4.5rem;
+    text-align: center;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+    z-index: 10;
+}
+
+.botao {
+    position: absolute;
+    bottom: 15%;
+    padding: 10px 22px;
+    background-color: rgba(255,255,255,0.85);
+    color: #000;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    z-index: 10;
+}
+.botao:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* --- MODAL DE EXPLICAÇÃO --- */
+.explicacao {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 200;
+}
+
+.explicacao.ativo {
+    display: flex;
+    animation: aparecer 0.8s ease forwards;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.explicacao img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+    filter: brightness(0.3);
+    z-index: 1;
+    transition: transform 1s ease;
+}
+
+.explicacao .texto {
+    position: relative;
+    z-index: 5;
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    padding: 40px;
+}
+
+.explicacao h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.explicacao p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+#fechar {
+    margin-top: 30px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#fechar:hover {
+    background: red;
+    color: white;
+}

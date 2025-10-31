@@ -3,6 +3,13 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
+body {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+body.fade-out {
+    opacity: 0;
+}
 
 .container {
     display: flex;

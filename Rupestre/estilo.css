@@ -1,0 +1,23 @@
+body {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    margin: 0;
+    padding: 0;
+}
+
+body.loaded {
+    opacity: 1;
+    background-color: black;
+}
+
+body.fade-out {
+    opacity: 0;
+    background-color: black;
+}
+
+.container img {
+    height: 1065px;
+    opacity: 70%;
+    padding: 0;
+    z-index: 1;
+}

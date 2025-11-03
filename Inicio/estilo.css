@@ -2,13 +2,8 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-}
-body {
     opacity: 1;
-    transition: opacity 1s ease;
-}
-body.fade-out {
-    opacity: 0;
+    background-color: white;
 }
 
 .container {
@@ -17,7 +12,7 @@ body.fade-out {
     height: 100vh;
     overflow: hidden;
     position: relative;
-}
+}   
 
 .divisor {
     position: absolute;

@@ -1,8 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    opacity: 1;
+    overflow: hidden;
     background-color: white;
 }
 
@@ -12,7 +11,7 @@ body {
     height: 100vh;
     overflow: hidden;
     position: relative;
-}   
+}
 
 .divisor {
     position: absolute;
@@ -23,11 +22,12 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
+    transition: opacity 0.5s ease;
 }
 
 .rupestre, .egipcia {
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -37,10 +37,10 @@ body {
 }
 
 .rupestre img, .egipcia img {
-    width: 120%;
-    height: 120%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transition: transform 1s ease, filter 0.6s ease;
+    transition: transform 1.5s ease-in-out, filter 1s ease-in-out;
     filter: brightness(0.8);
 }
 
@@ -70,4 +70,49 @@ h1 {
 .botao:hover {
     background-color: #000;
     color: #fff;
+}
+
+/* ======== TRANSIÇÃO PARA CADA LADO ======== */
+.expandir-esquerda, .expandir-direita {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    transition: all 1.5s ease-in-out;
+}
+
+.expandir-esquerda { left: 0; }
+.expandir-direita { right: 0; }
+
+/* imagem dentro da expansão */
+.expandir-esquerda img, .expandir-direita img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    filter: brightness(1);
+    transition: transform 1.5s ease-in-out, filter 1s ease-in-out;
+}
+
+/* fade do texto e botão */
+.expandir-esquerda h1, .expandir-esquerda .botao,
+.expandir-direita h1, .expandir-direita .botao {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Overlay para animação mantendo fundo visível */
+.overlay {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    z-index: 20;
+    transition: all 1.5s ease-in-out;
+}
+.overlay.expandir {
+    width: 100vw;
 }

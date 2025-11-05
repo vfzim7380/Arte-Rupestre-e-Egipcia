@@ -8,24 +8,20 @@ function criarOverlay(imagem, lado, destino) {
 
     if(lado === 'esquerda') {
         overlay.style.left = '0';
-        overlay.style.transformOrigin = 'left'; // origem esquerda
+        overlay.style.transformOrigin = 'left';
     } else {
         overlay.style.right = '0';
-        overlay.style.transformOrigin = 'right'; // origem direita
+        overlay.style.transformOrigin = 'right';
     }
 
-    // Adiciona no DOM
     document.body.appendChild(overlay);
 
-    // Bloqueia botões
     document.querySelectorAll('.botao').forEach(b => b.style.pointerEvents = 'none');
 
-    // Expande overlay (mesma transição para ambos)
     setTimeout(() => {
         overlay.classList.add('expandir');
     }, 50);
 
-    // Redireciona após animação
     setTimeout(() => {
         window.location.href = destino;
     }, 1500);

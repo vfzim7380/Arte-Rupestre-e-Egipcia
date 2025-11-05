@@ -4,10 +4,106 @@ body {
     padding: 0;
 }
 
-.container img {
-    height: auto;
+.imagem{
     width: 100%;
-    opacity: 90%;
+    height: 100%;
+    margin-top: -170px;
+    object-fit: cover;
     z-index: 1;
-    margin-top: -90px;
+    position: relative;
+}
+
+.container h1{
+    color:rgb(255, 255, 255);
+    text-align: center;
+    margin-top:-600px;
+    font-size: 70px;
+    text-shadow: 3px 2px 2px black;
+    position: relative;
+    z-index: 2;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: px;
+    display: flex;
+    justify-content: space-between;
+}
+#menu {
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background: rgba(34, 34, 34, 0.60);
+    backdrop-filter: blur(10px);
+    padding-top: 60px;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+#menu.active {
+    transform: translateX(0);
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    margin: 20px 0;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 20px;
+    display: block;
+    transition: 0.3s;
+    font-family: Arial, sans-serif;
+}
+nav ul li a:hover {
+    background: rgba(255,255,255,0.15);
+    padding-left: 30px;
+    border-radius: 6px;
+}
+
+.hamburger {
+    cursor: pointer;
+    width: 32px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 20px;
+    position: relative;
+    z-index: 7;
+}
+.hamburger span {
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+}
+.hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.animar-entrada {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.animar-entrada.ativo {
+    opacity: 1;
+    transform: translateY(0);
 }

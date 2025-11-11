@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6e9c4;
+    font-family: 'Papyrus', 'Caveat Brush', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    max-width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pergaminho-img {
+    width: 140%;
+    height: auto;
+    display: block;
+}
+
+
+.conteudo {
+    position: absolute;
+    top: 275px;
+    left: 130px;
+    width: 78%;
+    color: #4a1e00;
+    font-size: 24px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.conteudo h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.opcoes button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background: rgba(255, 237, 200, 0.6);
+    border: 2px solid #b38b43;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #3b1c00;
+    font-size: 18px;
+    font-family: 'Papyrus', 'Caveat Brush', cursive;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.opcoes button:hover {
+    background: rgba(245, 203, 127, 0.9);
+    transform: scale(1.02);
+}
+
+/* Botão de navegação */
+.navigation {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.navigation a {
+    background: #c89b56;
+    color: #f3ddbc;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Papyrus', 'Caveat Brush', cursive;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    background: #e1b96f;
+    color: #4b2c00;
+}

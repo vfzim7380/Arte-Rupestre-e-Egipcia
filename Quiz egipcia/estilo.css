@@ -12,6 +12,34 @@ body {
     align-items: center;
     height: 100vh;
 }
+.top_bar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 25px;
+
+    background: none;
+    padding: 0;
+    font-family: "Georgia", serif;
+    z-index: 100;
+}
+
+nav a {
+    color: #292929;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+.top_bar a:hover {
+    color: #91603a;
+    text-shadow: 1px 1px 3px #00000085;
+}
+
 
 .container {
     position: relative;
@@ -66,26 +94,4 @@ body {
 .opcoes button:hover {
     background: rgba(245, 203, 127, 0.9);
     transform: scale(1.02);
-}
-
-/* Botão de navegação */
-.navigation {
-    margin-top: 30px;
-    text-align: right;
-}
-
-.navigation a {
-    background: #c89b56;
-    color: #f3ddbc;
-    text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-family: 'Papyrus', 'Caveat Brush', cursive;
-    transition: 0.3s;
-}
-
-.navigation a:hover {
-    background: #e1b96f;
-    color: #4b2c00;
 }

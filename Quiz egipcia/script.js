@@ -6,14 +6,11 @@ function enviarResposta(correta) {
         localStorage.setItem("quizPontuacao", pontuacao);
     }
 
-    // PEGA O NOME DO ARQUIVO ATUAL (ex: quiz1.html)
     const paginaAtual = location.pathname.split("/").pop();
 
-    // EXTRAI APENAS O NÚMERO DO NOME DO ARQUIVO
     const numeroPagina = parseInt(paginaAtual.replace("quiz", "").replace(".html", ""));
 
-    // QUANTIDADE TOTAL DE PÁGINAS DO QUIZ
-    const totalPaginas = 5; // <-- ALTERE se tiver mais perguntas
+    const totalPaginas = 5;
 
     if (numeroPagina < totalPaginas) {
         location.href = `quiz${numeroPagina + 1}.html`;
@@ -23,14 +20,19 @@ function enviarResposta(correta) {
 }
 
 const refazer = document.querySelector('#bt_refazer');
+const voltar = document.querySelector('#bt_inicio')
 const acertos = Number(localStorage.getItem("quizPontuacao")) || 0;
-const total = 5; // quantidade total de perguntas
+const total = 5;
 
 document.getElementById("mensagemResultado").textContent =
     `Você acertou ${acertos} de ${total} perguntas!`;
 
-// quando o botão for clicado, executa:
 refazer.addEventListener("click", function () {
     localStorage.removeItem("quizPontuacao");
-    window.location.href = "quiz1.html"; // coloque aqui o nome da primeira página
+    window.location.href = "quiz1.html";
+});
+
+voltar.addEventListener("click", function () {
+    localStorage.removeItem("quizPontuacao");
+    window.location.href = "../inicio/index.html";
 });

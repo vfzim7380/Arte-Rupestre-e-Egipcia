@@ -15,12 +15,23 @@
 }
 
 body {
-    background: #f6e7be;
+    background: #303030; 
     font-family: "Georgia", serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 60%;
 }
 
 
@@ -91,6 +102,8 @@ p {
 
 </style>
 <body>
+
+<img src="../img/representacao-do-processo-de-mumificacao-uma-das-principais-caracteristicas-da-arte-egipcia.jpg" class="fundo">
 
 <div class="container">
     <div class="scroll">

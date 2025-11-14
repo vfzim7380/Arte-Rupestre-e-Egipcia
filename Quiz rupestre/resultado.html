@@ -7,20 +7,32 @@
 <link rel="stylesheet" href="resultado.css">
 </head>
 <style>
-    * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background: #f6e7be; /* cor de fundo igual às outras páginas */
-    font-family: "Georgia", serif;
+    background-color: #303030;
+    font-family: 'Caveat Brush', cursive;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
 }
+
+.fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 60%;
+    z-index: -1;
+}
+
 
 .scroll-container {
     display: flex;
@@ -29,48 +41,62 @@ body {
 }
 
 .scroll {
-    background-image: url("https://i.imgur.com/u0YcE82.png"); /* imagem de pergaminho */
-    background-size: cover;
-    padding: 70px 80px;
+    border-radius: 15px;
+    padding: 60px 80px;
     width: 900px;
+    max-width: 95%;
     text-align: center;
-    border-radius: 8px;
 }
 
 h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
+    font-size: 48px;
+    color: #d38f57;
+    text-shadow: 2px 2px 3px #000;
+    margin-bottom: 25px;
 }
 
 p {
-    font-size: 22px;
+    font-size: 26px;
+    color: #b3733c;
     margin-bottom: 35px;
+    font-weight: bold;
 }
 
 .btn {
-    background: #d49f54;
-    border: none;
-    padding: 12px 26px;
-    font-size: 20px;
+    background: rgba(245, 203, 127, 0.9);
+    border: 3px solid #a17a3f;
+    padding: 14px 28px;
+    font-size: 24px;
     cursor: pointer;
     border-radius: 12px;
-    transition: .2s;
-    font-family: inherit;
+    margin: 10px;
+    font-family: 'Caveat Brush', cursive;
+    color: #3b1c00;
+    font-weight: bold;
+    box-shadow: 4px 4px 0px #3f2a14;
+    transition: .25s;
 }
 
 .btn:hover {
-    background: #bd893e;
+    background: rgba(250, 215, 150, 1);
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px #3f2a14;
 }
 
 </style>
 <body>
 
-<div class="scroll-container">
+<img src="../img/fundo_quiz_rupestre.png" class="fundo">
+
+<div class="scroll-container"> 
     <div class="scroll">
         <h1>Resultado do Quiz</h1>
         <p id="mensagemResultado">Você acertou ?? de ?? perguntas!</p>
 
-        <button class="btn" onclick="refazerQuiz()">Refazer Quiz</button>
+        <div class="botao">
+            <button class="btn" id="bt_refazer" href="#">Refazer Quiz</button>
+            <button class="btn" id="bt_inicio" href="#">Inicio</button>
+        </div>
     </div>
 </div>
 

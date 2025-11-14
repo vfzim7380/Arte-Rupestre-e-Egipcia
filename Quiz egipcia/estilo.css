@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6e9c4;
+    font-family: 'Papyrus', 'Caveat Brush', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.top_bar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 25px;
+
+    background: none;
+    padding: 0;
+    font-family: "Georgia", serif;
+    z-index: 100;
+}
+
+nav a {
+    color: #292929;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+.top_bar a:hover {
+    color: #91603a;
+    text-shadow: 1px 1px 3px #00000085;
+}
+
+
+.container {
+    position: relative;
+    width: 1000px;
+    max-width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pergaminho-img {
+    width: 140%;
+    height: auto;
+    display: block;
+}
+
+
+.conteudo {
+    position: absolute;
+    top: 275px;
+    left: 130px;
+    width: 78%;
+    color: #4a1e00;
+    font-size: 24px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.conteudo h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.opcoes button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background: rgba(255, 237, 200, 0.6);
+    border: 2px solid #b38b43;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #3b1c00;
+    font-size: 18px;
+    font-family: 'Papyrus', 'Caveat Brush', cursive;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.opcoes button:hover {
+    background: rgba(245, 203, 127, 0.9);
+    transform: scale(1.02);
+}

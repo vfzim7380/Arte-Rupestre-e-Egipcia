@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resultado do Quiz</title>
+<link rel="stylesheet" href="resultado.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6e7be; /* cor de fundo igual às outras páginas */
+    font-family: "Georgia", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.scroll-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll {
+    background-image: url("https://i.imgur.com/u0YcE82.png"); /* imagem de pergaminho */
+    background-size: cover;
+    padding: 70px 80px;
+    width: 900px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+
+.btn {
+    background: #d49f54;
+    border: none;
+    padding: 12px 26px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: .2s;
+    font-family: inherit;
+}
+
+.btn:hover {
+    background: #bd893e;
+}
+
+</style>
+<body>
+
+<div class="scroll-container">
+    <div class="scroll">
+        <h1>Resultado do Quiz</h1>
+        <p id="mensagemResultado">Você acertou ?? de ?? perguntas!</p>
+
+        <button class="btn" onclick="refazerQuiz()">Refazer Quiz</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

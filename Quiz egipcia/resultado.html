@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resultado do Quiz</title>
+<link rel="stylesheet" href="resultado.css">
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6e7be;
+    font-family: "Georgia", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.scroll-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.scroll {
+    background-image: url("../img/ChatGPT Image 10 de nov. de 2025, 20_42_07.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    padding: 90px 120px;
+    width: 1000px;
+    height: 500px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #00000040;
+}
+
+
+p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.btn {
+    background: #d9a354;
+    border: none;
+    padding: 14px 32px;
+    font-size: 20px;
+    font-family: inherit;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 4px 4px 0px #b5853d;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 6px 0px #a57432;
+}
+
+</style>
+<body>
+
+<div class="container">
+    <div class="scroll">
+        <h1>Resultado do Quiz</h1>
+        <p id="mensagemResultado">Você acertou ?? de ?? perguntas!</p>
+        
+        <div class="botao">
+            <button class="btn" id="bt_refazer" href="#">Refazer Quiz</button>
+            <button class="btn" id="bt_inicio" href="#">Inicio</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

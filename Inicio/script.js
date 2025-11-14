@@ -34,5 +34,5 @@ btRupestre.addEventListener('click', e => {
 
 btEgipcia.addEventListener('click', e => {
     e.preventDefault();
-    criarOverlay('../img/egipcia_fundo.png', 'direita', 'http://127.0.0.1:5500/Egipcia/egipcia.html');
+    criarOverlay('../img/imageminicialegito.png', 'direita', 'http://127.0.0.1:5500/Egipcia/egipcia.html');
 });

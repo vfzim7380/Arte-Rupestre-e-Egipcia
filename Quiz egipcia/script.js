@@ -12,6 +12,29 @@ window.addEventListener("load", () => {
     });
 });
 
+// BOTÃO DE LEITURA DE ACESSIBILIDADE
+document.addEventListener("DOMContentLoaded", () => {
+    const btnLer = document.getElementById("btnLer");
+    const pergunta = document.getElementById("pergunta");
+    const alternativas = document.querySelectorAll("#alternativas button");
+
+    btnLer.addEventListener("click", () => {
+        let texto = pergunta.innerText + ". ";
+
+        alternativas.forEach(alt => {
+            texto += alt.innerText + ". ";
+        });
+
+        const speech = new SpeechSynthesisUtterance(texto);
+        speech.lang = "pt-BR";
+        speech.rate = 1;
+        speech.pitch = 1;
+
+        speechSynthesis.cancel();
+        speechSynthesis.speak(speech);
+    });
+});
+
 function enviarResposta(correta) {
     let pontuacao = Number(localStorage.getItem("quizPontuacao")) || 0;
 

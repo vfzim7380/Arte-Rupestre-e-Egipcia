@@ -20,7 +20,7 @@
 </header>
 <nav id="menu">
     <ul>
-        <li><a href="#">Início</a></li>
+        <li><a href="../Inicio/index.html">Início</a></li>
         <li><a href="../Egipcia/egipcia.html">Arte Egipcia</a></li>
         <li><a href="../Rupestre/rupestre.html">Arte Rupestre</a></li>
         <li><a href="../Quiz rupestre/quiz1.html">Quiz Arte Rupestre</a></li>
@@ -38,9 +38,9 @@
     <img src="../img/ChatGPT Image 10 de nov. de 2025, 20_42_07.png" alt="Pergaminho" class="pergaminho-img">
 
     <div class="conteudo">
-        <h2>Qual era o nome do estilo artístico rígido e padronizado que dominou a arte egípcia por mais de 3 mil anos?</h2>
+        <h2 id="pergunta">Qual era o nome do estilo artístico rígido e padronizado que dominou a arte egípcia por mais de 3 mil anos?</h2>
 
-        <div class="opcoes">
+        <div class="opcoes" id="alternativas">
             <button onclick="enviarResposta(true)">a) Cânone de proporções</button>
             <button onclick="enviarResposta(false)">b) Estilo Amarniano</button>
             <button onclick="enviarResposta(false)">c) Realismo helenístico</button>
@@ -50,6 +50,8 @@
     </div>
 </div>
 
+    <button id="btnLer" class="botao-ler">Ouvir pergunta</button>
+    
 <script src="script.js"></script>
 </body>
 </html>

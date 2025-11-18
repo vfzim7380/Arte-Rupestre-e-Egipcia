@@ -26,7 +26,6 @@ body {
 header {
     background: #222;
     color: white;
-    padding: px;
     display: flex;
     justify-content: space-between;
 }
@@ -77,7 +76,7 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: space-between;
 
-    margin: 20px;
+    margin: 20px;   
     position: relative;
     z-index: 7;
 }

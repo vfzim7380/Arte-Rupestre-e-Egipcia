@@ -20,7 +20,7 @@
 </header>
 <nav id="menu">
     <ul>
-        <li><a href="#">Início</a></li>
+        <li><a href="../Inicio/index.html">Início</a></li>
         <li><a href="../Egipcia/egipcia.html">Arte Egipcia</a></li>
         <li><a href="../Rupestre/rupestre.html">Arte Rupestre</a></li>
         <li><a href="../Quiz rupestre/quiz1.html">Quiz Arte Rupestre</a></li>
@@ -38,9 +38,9 @@
     <img src="../img/ChatGPT Image 10 de nov. de 2025, 20_42_07.png" alt="Pergaminho" class="pergaminho-img">
 
     <div class="conteudo">
-        <h2>Qual faraó é representado na famosa máscara funerária de ouro maciço descoberta em 1922?</h2>
+        <h2 id="pergunta">Qual faraó é representado na famosa máscara funerária de ouro maciço descoberta em 1922?</h2>
 
-        <div class="opcoes">
+        <div class="opcoes"  id="alternativas">
             <button onclick="enviarResposta(false)">a) Ramsés II</button>
             <button onclick="enviarResposta(false)">b) Cleópatra VII</button>
             <button onclick="enviarResposta(true)">c) Tutancâmon</button>
@@ -50,6 +50,8 @@
     </div>
 </div>
 
+    <button id="btnLer" class="botao-ler">Ouvir pergunta</button>
+    
 <script src="script.js"></script>
 </body>
 </html>

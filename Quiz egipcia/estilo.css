@@ -31,7 +31,7 @@ body {
     transform: translateX(-50%);
     display: flex;
     gap: 25px;
-
+    
     background: rgba(0, 0, 0, 0.25);
     padding: 10px 20px;
     border-radius: 12px;
@@ -198,4 +198,26 @@ nav ul li a:hover {
 }
 .hamburger.active span:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
+}
+
+.botao-ler {
+    background-color: #d8c59a;
+    border: 2px solid #5a3e1b;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 25px auto 40px auto;
+    font-family: 'Caveat Brush', cursive;
+    display: block;
+    text-align: center;
+    transition: 0.3s;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.botao-ler:hover {
+    background-color: #f0e2c3;
 }

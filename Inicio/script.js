@@ -36,3 +36,17 @@ btEgipcia.addEventListener('click', e => {
     e.preventDefault();
     criarOverlay('../img/imageminicialegito.png', 'direita', 'http://127.0.0.1:5500/Egipcia/egipcia.html');
 });
+
+const btn = document.getElementById("btnMenu");
+const menu = document.getElementById("menu");
+
+btn.addEventListener("click", () => {
+    btn.classList.toggle("active");
+    menu.classList.toggle("active");
+});
+
+window.addEventListener("load", () => {
+    document.querySelectorAll(".animar-entrada").forEach(el => {
+        el.classList.add("ativo");
+    });
+});

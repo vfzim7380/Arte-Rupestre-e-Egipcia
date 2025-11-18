@@ -83,11 +83,113 @@ p {
     box-shadow: 6px 6px 0px #3f2a14;
 }
 
+
+header {
+    background: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+#menu {
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background: rgba(34, 34, 34, 0.60);
+    backdrop-filter: blur(10px);
+    padding-top: 60px;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    position: fixed;
+    z-index: 3;
+}
+#menu.active {
+    transform: translateX(0);
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    margin: 20px 0;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 20px;
+    display: block;
+    transition: 0.3s;
+    font-family: Arial, sans-serif;
+}
+nav ul li a:hover {
+    background: rgba(255,255,255,0.15);
+    padding-left: 30px;
+    border-radius: 6px;
+}
+
+.hamburger {
+    cursor: pointer;
+    width: 32px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    z-index: 9999;
+}
+
+
+.hamburger span {
+    height: 3px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+}
+.hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
 </style>
 <body>
 
 <img src="../img/fundo_quiz_rupestre.png" class="fundo">
 
+<header>
+    <div class="hamburger animar-entrada" id="btnMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+<nav id="menu">
+    <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="../Egipcia/egipcia.html">Arte Egipcia</a></li>
+        <li><a href="../Rupestre/rupestre.html">Arte Rupestre</a></li>
+        <li><a href="../Quiz egipcia/quiz1.html">Quiz Arte Egipcia</a></li>
+    </ul>
+</nav>
 <div class="scroll-container"> 
     <div class="scroll">
         <h1>Resultado do Quiz</h1>

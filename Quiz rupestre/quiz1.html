@@ -34,20 +34,23 @@
     <a href="quiz5.html">Pergunta 5</a>
 </nav>
 
-<div class="container">
+<main>
+    <div class="container">
+        <div class="conteudo">
+            <h2 id="pergunta">A arte rupestre é o nome dado às criações artísticas feitas pelos seres humanos no período da Pré-História. Onde é mais comum encontrar essas pinturas e gravuras?</h2>
 
-    <div class="conteudo">
-        <h2>A arte rupestre é o nome dado às criações artísticas feitas pelos seres humanos no período da Pré-História. Onde é mais comum encontrar essas pinturas e gravuras?</h2>
+            <div class="opcoes" id="alternativas">
+                <button onclick="enviarResposta(false)">a)Em vasos de cerâmica cozida e cestos de palha.</button>
+                <button onclick="enviarResposta(true)">b) Nas paredes e tetos de cavernas e abrigos rochosos.</button>
+                <button onclick="enviarResposta(false)">c) Em livros e pergaminhos encontrados em bibliotecas antigas.</button>
+                <button onclick="enviarResposta(false)">d) Nas estátuas de bronze e metal enterradas.</button>
+            </div>
 
-        <div class="opcoes">
-            <button onclick="enviarResposta(false)">a)Em vasos de cerâmica cozida e cestos de palha.</button>
-            <button onclick="enviarResposta(true)">b) Nas paredes e tetos de cavernas e abrigos rochosos.</button>
-            <button onclick="enviarResposta(false)">c) Em livros e pergaminhos encontrados em bibliotecas antigas.</button>
-            <button onclick="enviarResposta(false)">d) Nas estátuas de bronze e metal enterradas.</button>
         </div>
-
     </div>
-</div>
+</main>
+
+<button id="btnLer" class="botao-ler">Ouvir pergunta</button>
 
 <script src="script.js"></script>
 </body>

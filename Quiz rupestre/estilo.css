@@ -205,10 +205,8 @@ nav ul li a:hover {
 }
 
 .botao-ler {
-    background-color: #d8c59a;
-    border: 2px solid #5a3e1b;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 8px;
     cursor: pointer;
     margin: 25px auto 40px auto;
@@ -218,8 +216,13 @@ nav ul li a:hover {
     transition: 0.3s;
     position: absolute;
     bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    background: rgba(236, 207, 173, 0.75);
+    border: none;
+    border-radius: 10px;
+    color: #3d2007;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px #885927, inset 0 0 10px rgba(71, 71, 71, 0.411);
+    backdrop-filter: blur(1px);
 }
 
 .botao-ler:hover {

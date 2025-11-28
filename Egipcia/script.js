@@ -11,3 +11,8 @@ window.addEventListener("load", () => {
         el.classList.add("ativo");
     });
 });
+const btn_quiz = document.getElementById("btn-quiz");
+
+btn_quiz.addEventListener("click", function() {
+    window.location.href = "../Quiz egipcia/quiz1.html";
+});

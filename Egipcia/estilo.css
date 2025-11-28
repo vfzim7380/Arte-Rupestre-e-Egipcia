@@ -2,6 +2,8 @@ body {
     background-color: black;
     margin: 0;
     padding: 0;
+    opacity: 3;
+    
     
 }
 
@@ -17,12 +19,14 @@ body {
 
 .container h1{
     color:rgb(255, 255, 255);
+    opacity: 3;
     text-align: center;
     margin-top: -3900px;
     font-size: 70px;
     text-shadow: 3px 2px 2px black;
     position: relative;
     z-index: 2;
+    
 }
 
 header {
@@ -51,12 +55,13 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: fixed;
 }
 nav ul li {
     margin: 20px 0;
 }
 nav ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 18px;
     padding: 12px 20px;
@@ -77,15 +82,14 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     margin: 20px;   
-    position: relative;
+    position: fixed;
     z-index: 7;
 }
 .hamburger span {
     height: 3px;
     width: 100%;
-    background: white;
+    background: rgb(116, 89, 89);
     border-radius: 4px;
     transition: 0.3s ease-in-out;
 }
@@ -109,16 +113,57 @@ nav ul li a:hover {
     transform: translateY(0);
 }
 .conteudo1{
- width: 80%;                   /* Largura da box */
-    margin: 500px auto;            /* Centraliza na tela */
-    background: rgba(0, 0, 0, 0.1); /* Fundo translúcido */
-    backdrop-filter: blur(5px);   /* Efeito vidro */
-    padding: 30px;                /* Espaçamento interno */
-    border-radius: 15px;          /* Bordinhas arredondadas */
-    border: 1px solid rgba(255,255,255,0.3);
-    color: white;                 /* Cor do texto */
-    font-size: 22px;
-    z-index: 5;
+ z-index: 40;
     position: relative;
+    background: rgba(48, 44, 44, 0.192);
+    backdrop-filter: blur(10px);
+    padding: 20px 100px;
+    margin: 450px 400px 0px 400px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px rgba(134, 124, 124, 0.411);
+    font-size: 28px;
+    color: white;
     
+}
+.conteudo2{
+ z-index: 40;
+    position: relative;
+    background: rgba(48, 44, 44, 0.192);
+    backdrop-filter: blur(10px);
+    padding: 20px 100px;
+    margin: 100px 400px 0px 400px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px rgba(134, 124, 124, 0.411);
+    font-size: 28px;
+    color: white;
+
+}
+.quiz {
+    position: relative;
+    z-index: 40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.quiz-btn {
+    background: #f5992fbd;
+    color: white;
+    margin: 300px 0 0 0;
+    padding: 15px 40px;
+    font-size: 28px;
+    font-family: Arial, sans-serif;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    transition: 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.quiz-btn:hover {
+    background: #ff8d2e;
+    transform: scale(1.06);
+    box-shadow: 0px 6px 16px rgba(0,0,0,0.5);
 }

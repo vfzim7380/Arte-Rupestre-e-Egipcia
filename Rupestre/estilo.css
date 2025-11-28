@@ -16,7 +16,7 @@ body {
 .container h1{
     color:rgb(255, 255, 255);
     text-align: center;
-    margin-top:-600px;
+    margin-top:-3800px;
     font-size: 70px;
     text-shadow: 3px 2px 2px black;
     position: relative;
@@ -26,9 +26,11 @@ body {
 header {
     background: #222;
     color: white;
-    padding: px;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    z-index: 400;
+    background: none;
 }
 #menu {
     position: fixed;

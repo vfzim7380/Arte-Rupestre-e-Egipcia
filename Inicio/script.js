@@ -29,7 +29,7 @@ function criarOverlay(imagem, lado, destino) {
 
 btRupestre.addEventListener('click', e => {
     e.preventDefault();
-    criarOverlay('../img/rupestrefundo.png', 'esquerda', 'http://127.0.0.1:5500/Rupestre/rupestre.html');
+    criarOverlay('../img/platão.png', 'esquerda', 'http://127.0.0.1:5500/Rupestre/rupestre.html');
 });
 
 btEgipcia.addEventListener('click', e => {

@@ -2,6 +2,7 @@ body {
     background-color: black;
     margin: 0;
     padding: 0;
+    
 }
 
 .imagem{
@@ -11,6 +12,7 @@ body {
     object-fit: cover;
     z-index: 1;
     position: relative;
+    
 }
 
 .container h1{

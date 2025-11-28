@@ -10,28 +10,10 @@ window.addEventListener("load", () => {
     document.querySelectorAll(".animar-entrada").forEach(el => {
         el.classList.add("ativo");
     });
-})
+});
 
-const abrir = document.getElementById("abrirjanela");
-const janela = document.getElementById("janela");
-const fechar = document.getElementById("fechar");
+const btn_quiz = document.getElementById("btn-quiz");
 
-abrir.onclick = () => {
-    janela.style.display = "block";
-};
-
-fechar.onclick = () => {
-    janela.style.display = "none";
-};
-
-const abri2 = document.getElementById("abrirjanela2");
-const janela2 = document.getElementById("janela2");
-const fechar2 = document.getElementById("fechar2");
-
-abrir2.onclick = () => {
-    janela2.style.display = "block";
-};
-
-fecha2.onclick = () => {
-    janela2.style.display = "none";
-};
+btn_quiz.addEventListener("click", function() {
+    window.location.href = "../Quiz rupestre/quiz1.html";
+});
